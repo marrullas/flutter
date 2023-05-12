@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
+import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +11,54 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Screen'),
-      ),);
+      ),
+      body: _HomeView(),
+    );
+  }
+}
+
+class _HomeView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    const menu = appMenuItems;
+
+    return ListView.builder(
+        itemCount: menu.length,
+        itemBuilder: (context, index) {
+          final item = menu[index];
+          return _CustomListTile(item: item);
+        });
+  }
+}
+
+class _CustomListTile extends StatelessWidget {
+  final MenuItem item;
+
+  const _CustomListTile({required this.item});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return ListTile(
+      title: Text(item.title),
+      subtitle: Text(item.subTitle),
+      leading: Icon(
+        item.icon,
+        color: colors.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: colors.primary,
+      ),
+      onTap: () {
+       /* Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const ButtonsScreen(),
+          ),
+        );*/
+        context.push(item.link);
+      },
+    );
   }
 }

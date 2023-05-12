@@ -16,6 +16,18 @@ class MenuItem {
 
 
 const appMenuItems = <MenuItem>[
+    MenuItem(
+    title: 'Buttons',
+    subTitle: 'Go to buttons screen',
+    link: '/buttons',
+    icon: Icons.color_lens,
+  ),
+      MenuItem(
+    title: 'Cards',
+    subTitle: 'Go to cards screen',
+    link: '/cards',
+    icon: Icons.color_lens,
+  ),
   MenuItem(
     title: 'Theme',
     subTitle: 'Change the app theme',
