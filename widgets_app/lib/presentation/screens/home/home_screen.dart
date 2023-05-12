@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_app/presentation/screens/screens.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
+
   const HomeScreen({super.key});
 
   @override
@@ -52,12 +55,13 @@ class _CustomListTile extends StatelessWidget {
         color: colors.primary,
       ),
       onTap: () {
-       /* Navigator.of(context).push(
+        /* Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => const ButtonsScreen(),
           ),
         );*/
-        context.push(item.link);
+        context.push(item.link); //usa la ruta de go_router para navegar
+        //context.pushNamed(CardsScreen.name); //usa una variable estatica en la clase del screen para navegar
       },
     );
   }
