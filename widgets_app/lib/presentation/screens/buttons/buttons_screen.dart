@@ -74,7 +74,7 @@ class _ButtonsView extends StatelessWidget {
 
                 ),
             ),
-            CustomButton(),
+            const CustomButton(),
           ],
         ),
       ),
