@@ -35,10 +35,10 @@ const appMenuItems = <MenuItem>[
     icon: Icons.refresh_rounded,
   ),
   MenuItem(
-    title: 'About',
-    subTitle: 'About this app',
-    link: '/about',
-    icon: Icons.info,
+    title: 'SnackBars',
+    subTitle: 'Go to snackbars screen',
+    link: '/snackbar',
+    icon: Icons.message,
   ),
   MenuItem(
     title: 'Settings',
