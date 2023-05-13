@@ -41,10 +41,10 @@ const appMenuItems = <MenuItem>[
     icon: Icons.message,
   ),
   MenuItem(
-    title: 'Settings',
-    subTitle: 'App settings',
-    link: '/settings',
-    icon: Icons.settings,
+    title: 'Animated containers',
+    subTitle: 'Stateful animated containers',
+    link: '/animated',
+    icon: Icons.animation,
   ),
   MenuItem(
     title: 'Help',
