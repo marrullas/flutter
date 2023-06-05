@@ -6,23 +6,21 @@ class MenuItem {
   final String link;
   final IconData icon;
 
-  const MenuItem({
-    required this.title, 
-    required this.subTitle, 
-    required this.link, 
-    required this.icon
-    });
+  const MenuItem(
+      {required this.title,
+      required this.subTitle,
+      required this.link,
+      required this.icon});
 }
 
-
 const appMenuItems = <MenuItem>[
-    MenuItem(
+  MenuItem(
     title: 'Buttons',
     subTitle: 'Go to buttons screen',
     link: '/buttons',
     icon: Icons.touch_app,
   ),
-      MenuItem(
+  MenuItem(
     title: 'Cards',
     subTitle: 'Go to cards screen',
     link: '/cards',
@@ -46,8 +44,16 @@ const appMenuItems = <MenuItem>[
     link: '/animated',
     icon: Icons.animation,
   ),
-  MenuItem(title: 'UI + Controls + Tiles', 
-  subTitle: 'Controles de flutter', link: '/ui-controls', icon: Icons.list),
+  MenuItem(
+      title: 'UI + Controls + Tiles',
+      subTitle: 'Controles de flutter',
+      link: '/ui-controls',
+      icon: Icons.list),
+        MenuItem(
+      title: 'Introducción a la aplicación',
+      subTitle: 'Tutorial de la app',
+      link: '/tutorial',
+      icon: Icons.accessibility_new_rounded),
   MenuItem(
     title: 'Help',
     subTitle: 'Help and support',
