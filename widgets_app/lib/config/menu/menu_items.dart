@@ -49,7 +49,7 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Controles de flutter',
       link: '/ui-controls',
       icon: Icons.list),
-        MenuItem(
+  MenuItem(
       title: 'Introducción a la aplicación',
       subTitle: 'Tutorial de la app',
       link: '/tutorial',
