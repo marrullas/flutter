@@ -20,15 +20,18 @@ const colorList = <Color>[
 
 class AppTheme {
   final int selectedColor;
+  final bool isDark;
 
   AppTheme({
     this.selectedColor = 0,
+    this.isDark = false,
   }) : assert(
           selectedColor >= 0 && selectedColor < colorList.length -1, 'Selected color index is out of range'
         );
 
   ThemeData getTheme() => ThemeData(
         useMaterial3: true,
+        brightness: isDark ? Brightness.dark : Brightness.light,
         colorSchemeSeed: colorList[selectedColor],
         appBarTheme: const AppBarTheme(
           centerTitle: false
